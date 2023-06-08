@@ -4,6 +4,9 @@ pipeline {
         stage('Example') {
             steps {
                 echo "Hello Hello main${params.Branch}"
+                sh '''
+                    java -version
+                '''
             }
         }
     }
