@@ -3,7 +3,7 @@ pipeline {
         stages {
         stage('Example') {
             steps {
-                echo "Hello ${params.Branch}"
+                echo "Hello Hello ${params.Branch}"
             }
         }
     }
