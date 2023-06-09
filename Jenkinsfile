@@ -3,14 +3,11 @@ pipeline {
         stages {
         stage('Build') {
             steps {
-                echo "Hello Hello main${params.Branch}"
+                echo "MAIN BRANCH --- JENKINS BUID PACKAGE"
                 echo "Starting Build #########################################################"
                 echo "PATH is: ${env.PATH}"
-                sh '''
-                    java -version
-                    mvn clean package
-                    echo "PATH is: ${env.PATH}"
-                '''
+                sh 'java -version'
+                sh 'mvn clean package'
             }
         }
     }
