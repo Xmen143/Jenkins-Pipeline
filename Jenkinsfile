@@ -1,9 +1,10 @@
 pipeline {
     agent any
         stages {
-        stage('Example') {
+        stage('Build') {
             steps {
                 echo "Hello Hello main${params.Branch}"
+                echo "Starting Build #########################################################"
                 echo "PATH is: ${env.PATH}"
                 sh '''
                     java -version
@@ -12,5 +13,12 @@ pipeline {
                 '''
             }
         }
+      stage ('Deploy') {
+      steps {
+        script {
+          
+        }
+      }
+    }
     }
 }
