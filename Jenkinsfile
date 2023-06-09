@@ -8,7 +8,6 @@ pipeline {
                 sh '''
                     java -version
                     echo "PATH is: ${env.PATH}"
-                    javac BubbleSort.java
                 '''
             }
         }
